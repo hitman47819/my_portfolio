@@ -601,114 +601,76 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 bg-gray-50 dark:bg-gray-900">
-        <div class="container mx-auto max-w-4xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                Get In Touch
-            </h2>
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
-                <form id="contact-form" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                            <input type="text" id="name" name="name" required
-                                   class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 transition-all duration-300">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="email" name="email" required
-                                   class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 transition-all duration-300">
-                        </div>
-                    </div>
+   <section id="contact" class="py-20 px-4 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto max-w-4xl">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            Get In Touch
+        </h2>
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-8">
+            <!-- Form changed to use standard HTML submission -->
+            <form action="YOUR_APPS_SCRIPT_WEB_APP_URL" method="POST" class="space-y-6">
+                <div class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
-                        <input type="text" id="subject" name="subject" required
+                        <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                        <input type="text" id="name" name="name" required
                                class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 transition-all duration-300">
                     </div>
                     <div>
-                        <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                        <textarea id="message" name="message" rows="5" required
-                                  class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 transition-all duration-300"></textarea>
+                        <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                        <input type="email" id="email" name="email" required
+                               class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 transition-all duration-300">
                     </div>
-                    <div class="text-center">
-                        <button type="submit" 
-                                class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-                <div id="form-message" class="mt-4 text-center hidden"></div>
-            </div>
-            
-            <div class="mt-12 text-center">
-                <h3 class="text-xl font-semibold mb-4">Connect With Me</h3>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://linkedin.com/in/mohamed-ali-farouk47" target="_blank" 
-                       class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:shadow-lg transform hover:scale-110 transition-all duration-300">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/hitman47819" target="_blank"
-                       class="w-12 h-12 bg-gray-800 dark:bg-gray-600 rounded-full flex items-center justify-center text-white hover:shadow-lg transform hover:scale-110 transition-all duration-300">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:mohamedabdelbaky365@gmail.com"
-                       class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transform hover:scale-110 transition-all duration-300">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="https://wa.me/+201068643041/?text=hello can you help me with"
-                       class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transform hover:scale-110 transition-all duration-300">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
                 </div>
+                <div>
+                    <label for="subject" class="block text-sm font-medium mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" required
+                           class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 transition-all duration-300">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                    <textarea id="message" name="message" rows="5" required
+                              class="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent dark:bg-gray-700 transition-all duration-300"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" 
+                            class="px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white rounded-full hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+            <!-- The form-message div is no longer used by JS, but kept in HTML -->
+            <div id="form-message" class="mt-4 text-center hidden"></div>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <h3 class="text-xl font-semibold mb-4">Connect With Me</h3>
+            <div class="flex justify-center space-x-6">
+                <a href="https://linkedin.com/in/mohamed-ali-farouk47" target="_blank" 
+                   class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-white hover:shadow-lg transform hover:scale-110 transition-all duration-300">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/hitman47819" target="_blank"
+                   class="w-12 h-12 bg-gray-800 dark:bg-gray-600 rounded-full flex items-center justify-center text-white hover:shadow-lg transform hover:scale-110 transition-all duration-300">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:mohamedabdelbaky365@gmail.com"
+                   class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transform hover:scale-110 transition-all duration-300">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/+201068643041/?text=hello can you help me with"
+                   class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white hover:shadow-lg transform hover:scale-110 transition-all duration-300">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTop" 
-            class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 opacity-0 invisible z-40">
-        <i class="fas fa-arrow-up"></i>
-    </button>
- <script>
-document.getElementById("contact-form").addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const formMessage = document.getElementById("form-message");
-  formMessage.classList.add("hidden");
-
-  const formData = {
-    name: document.getElementById("name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    subject: document.getElementById("subject").value.trim(),
-    message: document.getElementById("message").value.trim(),
-  };
-
-  try {
-    // Use AllOrigins proxy to bypass CORS safely
-    const proxyUrl = "https://api.allorigins.win/raw?url=" +
-      encodeURIComponent("https://script.google.com/macros/s/AKfycbwPWP_7ekjDDG9DRTBP4Lh7mWcZeLDQhHfHtFoKhEG43J_4u9BHAd6LEjkSWOqoTZiU/exec");
-
-    const response = await fetch(proxyUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    const result = await response.json();
-    console.log("Response:", result);
-
-    formMessage.textContent = "✅ Message sent successfully!";
-    formMessage.classList.remove("hidden", "text-red-500");
-    formMessage.classList.add("text-green-500");
-    e.target.reset();
-  } catch (error) {
-    console.error("Error:", error);
-    formMessage.textContent = "❌ Failed to send message. Try again later.";
-    formMessage.classList.remove("hidden", "text-green-500");
-    formMessage.classList.add("text-red-500");
-  }
-});
-</script>
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" 
+        class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 opacity-0 invisible z-40">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
 
     <!-- Footer -->
