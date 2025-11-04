@@ -686,7 +686,7 @@ document.getElementById("contact-form").addEventListener("submit", async functio
   try {
     // Use AllOrigins proxy to bypass CORS safely
     const proxyUrl = "https://api.allorigins.win/raw?url=" +
-      encodeURIComponent("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec");
+      encodeURIComponent("https://script.google.com/macros/s/AKfycbwPWP_7ekjDDG9DRTBP4Lh7mWcZeLDQhHfHtFoKhEG43J_4u9BHAd6LEjkSWOqoTZiU/exec");
 
     const response = await fetch(proxyUrl, {
       method: "POST",
