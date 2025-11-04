@@ -669,20 +669,12 @@
             class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-primary to-secondary text-white rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 opacity-0 invisible z-40">
         <i class="fas fa-arrow-up"></i>
     </button>
-<script>
-document.getElementById("contact-form").addEventListener("submit", async (e) => {
+ <script>
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const formMessage = document.getElementById("form-message");
-  formMessage.classList.remove("hidden");
-  formMessage.textContent = "Sending...";
-  formMessage.style.color = "#888";
-
-  // Replace this with your Google Apps Script URL
-  const scriptURL = "https://script.google.com/macros/s/AKfycbwPWP_7ekjDDG9DRTBP4Lh7mWcZeLDQhHfHtFoKhEG43J_4u9BHAd6LEjkSWOqoTZiU/exec";
-
-  // Use a CORS proxy to safely reach Google Script from GitHub Pages
-  const proxyURL = "https://api.allorigins.win/raw?url=" + encodeURIComponent(scriptURL);
+  formMessage.classList.add("hidden");
 
   const formData = {
     name: document.getElementById("name").value.trim(),
@@ -692,32 +684,32 @@ document.getElementById("contact-form").addEventListener("submit", async (e) => 
   };
 
   try {
-    const response = await fetch(proxyURL, {
+    // Use AllOrigins proxy to bypass CORS safely
+    const proxyUrl = "https://api.allorigins.win/raw?url=" +
+      encodeURIComponent("https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec");
+
+    const response = await fetch(proxyUrl, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
 
-    if (!response.ok) throw new Error("Network error");
     const result = await response.json();
+    console.log("Response:", result);
 
-    if (result.success) {
-      formMessage.textContent = "✅ Message sent successfully!";
-      formMessage.style.color = "green";
-      document.getElementById("contact-form").reset();
-    } else {
-      formMessage.textContent = "⚠️ " + (result.message || "Something went wrong.");
-      formMessage.style.color = "orange";
-    }
+    formMessage.textContent = "✅ Message sent successfully!";
+    formMessage.classList.remove("hidden", "text-red-500");
+    formMessage.classList.add("text-green-500");
+    e.target.reset();
   } catch (error) {
     console.error("Error:", error);
-    formMessage.textContent = "❌ Failed to send. Please try again later.";
-    formMessage.style.color = "red";
+    formMessage.textContent = "❌ Failed to send message. Try again later.";
+    formMessage.classList.remove("hidden", "text-green-500");
+    formMessage.classList.add("text-red-500");
   }
 });
 </script>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-8 px-4">
