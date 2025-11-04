@@ -266,7 +266,7 @@ function initContactForm() {
                 data.ip = ip;
                 data.timestamp = new Date().toISOString();
 
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby8OCzRjZ-0o6JAHsqYnkqjQAsvYdJTLI8JpRvF2SvFrdbI58n7PuPvAT45HOw2r4Ahcw/exec';
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby86TieivMp8Yg7ulf5eRJo8tKM_FPyn4Df17ub2NTBZROuAxh2GckpyPZepk1wKeNrAQ/exec';
 
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
